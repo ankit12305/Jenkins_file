@@ -36,7 +36,7 @@ agent any
 						sh "sudo yum install git -y"
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						        sh "sudo mv /home/ec2-user/var/www/html/indexa.html /var/www/html/index.html"  
+						        sh "sudo mv /var/www/html/indexa.html /var/www/html/index.html"  
 						
 						
 						  sh "sudo service httpd start"
@@ -57,7 +57,7 @@ agent any
 				       sh "sudo yum install git -y"
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						   sh "sudo mv /home/ec2-user/var/www/html/indexb.html /var/www/html/index.html"   
+						   sh "sudo mv /var/www/html/indexb.html /var/www/html/index.html"   
 					   
 				
 						    sh "sudo service httpd start"
