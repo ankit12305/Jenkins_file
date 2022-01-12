@@ -33,7 +33,7 @@ agent any
 		                    }
 		                } 
 					steps {
-						
+						sh "sudo yum install git -y"
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						        sh "sudo mv /var/www/html/indexa.html /var/www/html/index.html"  
@@ -54,7 +54,7 @@ agent any
 			                 }
 			              }
 			      steps {
-				       
+				       sh "sudo yum install git -y"
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						   sh "sudo mv /var/www/html/indexb.html /var/www/html/index.html"   
