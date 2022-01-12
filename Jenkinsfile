@@ -10,16 +10,11 @@ agent any
 		                     }     
 		                } 
 					steps {
-							dir ("/mnt/git/"){
+							dir ("/mnt/git/") {
                                                                  /*  sh "rm -rf SCM SCM@tmp"  */
 							           sh "git clone https://github.com/Suraj-1204/SCM.git -b master"
-							           sh "cp -r EC2-Linux.pem /mnt/git/SCM"
-							}
-							dir ("/mnt/git/SCM"){
-							           sh "scp -r -i EC2-Linux.pem indexa.html ec2-user@10.0.2.165:/var/www/html/"
-						
-							            sh "scp -r -i EC2-Linux.pem indexb.html ec2-user@10.0.3.225:/var/www/html/"
-							
+							           sh "scp -i -r key.pem indexa.html ec2-user@172.31.31.54:/var/www/html"
+							          sh "scp -i -r key.pem indexb.html ec2-user@172.31.46.68:/var/www/html"
 							}
 					      }
  			    } 
