@@ -13,6 +13,7 @@ agent any
 							dir ("/mnt/git/") {
                                                                  /*  sh "rm -rf SCM SCM@tmp"  */
 							           sh "git clone https://github.com/ankit12305/Jenkins_file.git -b main"
+								sleep 5
 							           sh "scp -i -r key.pem /mnt/git/Jenkins_file/indexa.html ec2-user@172.31.31.54:/var/www/html"
 							          sh "scp -i -r key.pem /mnt/git/Jenkins_file/indexb.html ec2-user@172.31.46.68:/var/www/html"
 							}
