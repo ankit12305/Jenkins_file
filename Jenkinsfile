@@ -16,6 +16,8 @@ agent any
 								sh "cp -r /key.pem /mnt/git/Jenkins_file"
 							}
 						      dir ("/mnt/git/Jenkins_file") {
+							      sh "chmod 700 indexa.html"
+							      sh "chmod 700 indexb.html"
 							           sh "scp -i -r key.pem indexa.html ec2-user@172.31.31.54:/var/www/html"
 							          sh "scp -i -r key.pem indexb.html ec2-user@172.31.46.68:/var/www/html"
 							}
