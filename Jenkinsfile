@@ -28,7 +28,7 @@ agent any
 			stage ('Slave-1') {
 			     agent {
 		              label {
-		                      label "slave-1"
+		                      label "slave1"
 				                /* customWorkspace "/home/ec2-user/"  */
 		                    }
 		                } 
@@ -49,7 +49,7 @@ agent any
 			     agent {
 			
 			           label {
-				               label "lave-2"
+				               label "slave2"
 					             /*customWorkspace "/home/ec2-user/"   */
 			                 }
 			              }
