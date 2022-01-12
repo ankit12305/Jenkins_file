@@ -18,8 +18,8 @@ agent any
 						      dir ("/mnt/git/Jenkins_file") {
 							      sh "chmod 700 indexa.html"
 							      sh "chmod 700 indexb.html"
-							           sh "scp -i key.pem -r indexa.html ec2-user@172.31.31.54:/var/www/html"
-							          sh "scp -i key.pem -r indexb.html ec2-user@172.31.46.68:/var/www/html"
+							           sh "scp -r -i key.pem indexa.html ec2-user@172.31.31.54:/var/www/html"
+							          sh "scp -r -i key.pem indexb.html ec2-user@172.31.46.68:/var/www/html"
 							}
 					      }
  			    } 
